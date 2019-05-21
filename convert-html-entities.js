@@ -10,7 +10,7 @@ function convertHTML(str) {
       "&": "&amp;",
       "<" : "&lt;",
       ">": "&gt;",
-      '"': 	"&quot;",
+      '"': "&quot;",
       "'": "&apos;"
    };
    for (let i = 0; i < str.length; i++) {
