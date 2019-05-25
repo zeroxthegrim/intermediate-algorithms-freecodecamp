@@ -20,11 +20,11 @@ function sumFibs(num) {
    }
    return fibbArr
       .filter(num => {
-      return num % 2 != 0;
+         return num % 2 != 0;
    })
       .reduce((a, b) => {
          return a + b;
-      }, 0)
+      }, 0);
  }
  
  console.log(sumFibs(4));
