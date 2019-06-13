@@ -10,16 +10,13 @@ otherwise, arr should be returned as an empty array.
 
 function dropElements(arr, func) {
    let finalArr = [];
-   let whatsLeft = [];
    for (let i = 0; i < arr.length; i++) {
-      if (!func(arr[i])) {
-         finalArr.push(arr[i]);
-      } else {
-         whatsLeft = arr.slice(i);
+      if (func(arr[i])) {
+         finalArr = arr.slice(i);
          break;
-      }
+      } 
    }
-   return whatsLeft;
+   return finalArr;
 }
 
 console.log(dropElements([1, 2, 3, 4], function(n) {return n >= 3;}));
